@@ -1,0 +1,16 @@
+<div>
+	<%= link_to "Back to Products" products_path %>
+</div>
+
+<div>
+	<p><%= @product[:name] %></p>
+	<p><%= @product[:description] %></p>
+</div>
+
+<div>
+	<%= image_tag @product.image_url %>
+</div>
+
+<div>
+	<%= @product.price_in_cents %>
+</div>

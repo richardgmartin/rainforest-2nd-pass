@@ -1,0 +1,18 @@
+<div>
+	h1>Rainfrest - Products</h1>
+	<%= link_to "Add a new product" new_product_path %>
+</div>
+
+<% @products.each do |product| %>
+	<div>
+		<%= link_to image_tag(product.image_url), "/products/#{product.id}" %><br />
+	</div>
+	<div>
+		<%= product.price_in_cents %><br />
+	</div>
+	<div>
+		<%= product.name %><br />
+		<%= product.description %><br />
+	</div>
+
+<% end %>
