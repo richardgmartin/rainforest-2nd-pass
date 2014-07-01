@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :ensure_logged_in, :only => [:show]
 
 	# home page - display all products
   def index
