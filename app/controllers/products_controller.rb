@@ -24,6 +24,10 @@ class ProductsController < ApplicationController
   # action to show a product
   def show
     @product = Product.find(params[:id])
+
+    if current_user
+      @review = @product.reviews.build
+    end
   end
 
   # action to edit a product
